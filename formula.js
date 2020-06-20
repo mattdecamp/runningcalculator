@@ -1,16 +1,11 @@
 // This is the main calculating function for Pace Per Mile
 const pacePerMile = function () {
-    // let hours = 0;
-    // let minutes = 20;
-    // let seconds = 30;
-    // let mileage = 3;
     const hours = parseInt(document.runCalculator.hours.value);
     const minutes = parseInt(document.runCalculator.minutes.value);
     const seconds = parseInt(document.runCalculator.seconds.value);
-    const mileage = parseFloat(document.runCalculator.mileage.value);
+    const mileage = parseFloat(document.runCalculator.mileage.value); // parseFloat ensures decimal input option
     // console.log(hours + " " + minutes + " " + seconds + " " + mileage);
     // This combines the seconds, minutes and hours into total seconds and divides that by mileage to get seconds per mile
-
     const secondsPerMile = (seconds + minutes * 60 + hours * 60 * 60) / mileage;
     console.log("seconds per mile:" + " " + secondsPerMile);
     // Calculates the number of hours per mile;

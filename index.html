@@ -72,26 +72,54 @@
         <form name="runCalculator" id="container">
             <div class="c-input">
                 <label for="hours">Hours</label>
-                <input type="number" inputmode="numeric" name="hours" id="hours" value="00" />
+                <input
+                    type="number"
+                    inputmode="numeric"
+                    name="hours"
+                    id="hours"
+                    value="00"
+                />
             </div>
             <div class="c-input">
                 <label for="minutes">Minutes</label>
-                <input type="number" inputmode="numeric" name="minutes" id="minutes" value="00" />
+                <input
+                    type="number"
+                    inputmode="numeric"
+                    name="minutes"
+                    id="minutes"
+                    value="00"
+                />
             </div>
             <div class="c-input">
                 <label for="seconds">Seconds</label>
-                <input type="number" inputmode="numeric" name="seconds" id="seconds" value="00" />
+                <input
+                    type="number"
+                    inputmode="numeric"
+                    name="seconds"
+                    id="seconds"
+                    value="00"
+                />
             </div>
             <div class="c-input">
                 <label for="mileage">Mileage</label>
-                <input type="number" step="any" name="mileage" id="mileage" value="0" />
+                <input
+                    type="number"
+                    step="any"
+                    name="mileage"
+                    id="mileage"
+                    value="0"
+                />
             </div>
-            <button id="calculate" class="c-button" type="button" onclick="pacePerMile()">
+            <button
+                id="calculate"
+                class="c-button"
+                type="button"
+                onclick="pacePerMile()"
+            >
                 Calculate
             </button>
             <output id="result"></output>
         </form>
-        
 
         <script type="text/javascript" src="./formula.js"></script>
     </body>
