@@ -2,8 +2,9 @@
 
 ## Build Phase #1 (Ongoing)
 
-* Ability to calculate pace per mile based on total run time and total mileage inputs.
-* Calculator interface
+* ~~Ability to calculate pace per mile based on total run time and total mileage inputs.~~
+* ~~Calculator interface~~
+* Live User-accessible Application
 
 ## Build Phase #2 (TBD)
 
