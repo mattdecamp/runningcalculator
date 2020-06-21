@@ -1,0 +1,32 @@
+{
+  "name": "runningcalculator",
+  "version": "1.0.0",
+  "description": "A simple calculator to track you run and walking paces",
+  "main": "formula.js",
+  "scripts": {
+    "serve": "eleventy --serve",
+    "scss": "node-sass --output-style compressed -o _site/css src/scss",
+    "watch:css": "onchange 'src/scss' -- npm run scss",
+    "start": "run-p serve watch:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattdecamp/runningcalculator.git"
+  },
+  "keywords": [
+    "calculator",
+    "running",
+    "javascript"
+  ],
+  "author": "Matt DeCamp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattdecamp/runningcalculator/issues"
+  },
+  "homepage": "https://github.com/mattdecamp/runningcalculator#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "node-sass": "^4.14.1",
+    "onchange": "^7.0.2"
+  }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8" />
+        <title>{{ site.name }}</title>
+        <meta name="description" content="An app to help you calculate your running pace" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta property="og:title" content="{{ site.name}}" />
+        <meta property="og:type" content="Web Application" />
+        <meta property="og:url" content="{{ site.url }}" />
+        <meta property="og:image" content="" />
+
+        <link rel="manifest" href="site.webmanifest" />
+        <link rel="apple-touch-icon" href="icon.png" />
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>  
+
+    <body>
+    {{ content | safe }}
+    <script type="text/javascript" src="/js/formula.js"></script> 
+    </body>
+</html>

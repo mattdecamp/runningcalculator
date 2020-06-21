@@ -1,0 +1,73 @@
+---
+layout: layouts/base.njk
+title: 'Running Calculator'
+permalink: '/'
+---
+
+        <form name="runCalculator" id="container">
+            <h1 id="heading">Calculate Your Pace</h1>
+            <hr />
+            <div id="calculator--wrapper">
+                <div class="c-input">
+                    <input
+                        type="number"
+                        inputmode="numeric"
+                        name="hours"
+                        id="hours"
+                        placeholder="00"
+                        onfocus="this.placeholder = ''"
+                    />
+                    <label for="hours">Hours</label>
+                </div>
+                <div class="c-input">
+                    <input
+                        type="number"
+                        inputmode="numeric"
+                        name="minutes"
+                        id="minutes"
+                        placeholder="00"
+                        onfocus="this.placeholder = ''"
+                    />
+                    <label for="minutes">Minutes</label>
+                </div>
+                <div class="c-input">
+                    <input
+                        type="number"
+                        inputmode="numeric"
+                        name="seconds"
+                        id="seconds"
+                        placeholder="0"
+                        onfocus="this.placeholder = ''"
+                    />
+                    <label for="seconds">Seconds</label>
+                </div>
+                <div class="c-input">
+                    <input
+                        type="number"
+                        step="any"
+                        name="mileage"
+                        id="mileage"
+                        placeholder="0"
+                        onfocus="this.placeholder = ''"
+                    />
+                    <label for="mileage">Mileage</label>
+                </div>
+                <button
+                    id="calculate"
+                    class="c-button"
+                    type="button"
+                    onclick="pacePerMile()"
+                >
+                    Calculate
+                </button> 
+                <div id="output--container">
+                    <label for="result">Pace:</label>
+                    <div id="output--holder">
+                        <output name="result" id="result"></output>
+                    </div>
+                    <span>/mile</span>
+                </div>
+            </div>
+        </form> 
+
+        
