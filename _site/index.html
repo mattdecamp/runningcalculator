@@ -2,15 +2,15 @@
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>What&#39;s My Pace? 🏃‍♀ Running Calculator</title>
+        <title>🏃‍♀ What&#39;s My Pace?</title>
         <meta name="description" content="An app to help you calculate your running pace" />
         <meta name="keywords" content="running,walking,calculator,pace,time,mile,pace per mile" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta property="og:title" content="What&#39;s My Pace? 🏃‍♀ Running Calculator" />
+        <meta property="og:title" content="🏃‍♀ What&#39;s My Pace?" />
         <meta property="og:type" content="Web Application" />
-        <meta property="og:url" content="" />
-        <meta property="og:image" content="images/Running-Calculator-Jogger.jpg" />"
+        <meta property="og:url" content="https://whatsmypace.app" />
+        <meta property="og:image" content="https://whatsmypace.appimages/Running-Calculator-Jogger.jpg" />"
 
         <link rel="manifest" href="site.webmanifest" />
         
@@ -32,12 +32,14 @@
             <div id="calculator--wrapper">
                 <div class="c-input">
                     <input
+                        autofocus=true
                         type="number"
                         inputmode="numeric"
                         name="hours"
                         id="hours"
-                        placeholder="00"
-                        onfocus="this.placeholder = ''"
+                        value=""
+                        onblur="if (this.value=='') this.value='0';"
+                        
                     />
                     <label for="hours">Hours</label>
                 </div>
@@ -47,8 +49,9 @@
                         inputmode="numeric"
                         name="minutes"
                         id="minutes"
-                        placeholder="00"
-                        onfocus="this.placeholder = ''"
+                        placeholder=":00:"
+                        value=""
+                        onblur="if (this.value=='') this.value='0';"
                     />
                     <label for="minutes">Minutes</label>
                 </div>
@@ -58,8 +61,9 @@
                         inputmode="numeric"
                         name="seconds"
                         id="seconds"
-                        placeholder="0"
-                        onfocus="this.placeholder = ''"
+                        placeholder=":00"
+                        value=""
+                        onblur="if (this.value=='') this.value='0';"
                     />
                     <label for="seconds">Seconds</label>
                 </div>
@@ -70,7 +74,8 @@
                         name="mileage"
                         id="mileage"
                         placeholder="0"
-                        onfocus="this.placeholder = ''"
+                        value=""
+                        onblur="if (this.value=='') this.value='0';"
                     />
                     <label for="mileage">Mileage</label>
                 </div>
@@ -85,7 +90,7 @@
                 <div id="output--container">
                     <label for="result">Pace:</label>
                     <div id="output--holder">
-                        <output name="result" id="result"></output>
+                        <output name="result" id="result" value="00:00:00"></output>
                     </div>
                     <span>/mile</span>
                 </div>
