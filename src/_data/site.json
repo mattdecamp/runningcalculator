@@ -1,8 +1,9 @@
 {
     "showThemeCredit": true,
-    "name": "What's My Pace? | Running Calculator",
+    "name": "What's My Pace? 🏃‍♀ Running Calculator",
     "shortDesc": "A simple app to calculate your running pace",
     "url": "",
+    "image": "images/Running-Calculator-Jogger.jpg",
     "authorEmail": "matthewdecamp@gmail.com",
     "siteEmail": "",
     "authorHandle": "@mpdecamp",

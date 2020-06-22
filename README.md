@@ -1,10 +1,10 @@
-# A simple calculator for Runners 🏃‍♀
+# A simple calculator for Runners 🏃‍♀ and Walkers 🚶
 
-## Build Phase #1 (Ongoing)
+## Build Phase #1 (Complete)
 
 * ~~Ability to calculate pace per mile based on total run time and total mileage inputs.~~
 * ~~Calculator interface~~
-* Live User-accessible Application
+* ~~Live User-accessible Application~~
 
 ## Build Phase #2 (TBD)
 
