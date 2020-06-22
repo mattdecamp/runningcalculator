@@ -25,9 +25,12 @@ const pacePerMile = function () {
     ":" +
     zeroes(paceMinutes, "0", 2) +
     ":" +
-    zeroes(paceSeconds, "0", 2);
-    document.runCalculator.result.value = pace;
-    console.log(hours);
+        zeroes(paceSeconds, "0", 2);
+    if (pace === "aN:aN:aN") {
+        document.runCalculator.result.value = "00:00:00";
+    } else {
+        document.runCalculator.result.value = pace;
+    }
 };
 
 // // This combines the seconds, minutes and hours into TOTAL SECONDS
