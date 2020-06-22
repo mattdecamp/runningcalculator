@@ -1,4 +1,6 @@
-# A simple calculator for Runners 🏃‍♀ and Walkers 🚶
+# A simple calculator for movers 🏃‍♀️👨🏾‍🦽🚶‍♂️  
+
+Built with [Eleventy](https://11ty.dev) and deployed with [Netlify](https://netlify.com).
 
 ## Build Phase #1 (Complete)
 
@@ -13,3 +15,5 @@
 ## Build Phase #3 (TBD)
 
 * Including Kilometers, Meters and Yards as distance input options.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6df8a886-9b10-49aa-ac33-1864c5768b2e/deploy-status)](https://app.netlify.com/sites/whatsmypace/deploys)
