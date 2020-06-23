@@ -8,11 +8,7 @@ Built with [Eleventy](https://11ty.dev) and deployed with [Netlify](https://netl
 * ~~Calculator interface~~
 * ~~Live User-accessible Application~~
 
-## Build Phase #2 (TBD)
-
-* Ability to enter any two of the three inputs (run time, mileage, pace per mile) to calculate the third.
-
-## Build Phase #3 (TBD)
+## Build Phase #2 (Ongoing)
 
 * Including Kilometers, Meters and Yards as distance input options.
 
