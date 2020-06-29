@@ -44,16 +44,24 @@ permalink: '/'
                     />
                     <label for="seconds">Seconds</label>
                 </div>
-                <div class="c-input">
-                    <input
+                <div class="c-input distance">
+                    <div id="input--distance">
+                        <input
                         type="number"
+                        inputmode="numeric"
                         step="any"
                         name="mileage"
                         id="mileage"
                         placeholder="0"
                         value=""
                         onblur="if (this.value=='') this.value='0';"
-                    />
+                        />
+                        <select id="distanceMeasure" name="distance">
+                            <option value="miles">Miles</option>
+                            <option value="kilometers">Kilometers</option>
+                            <option value="yards">Yards</option>
+                        </select>
+                    </div>
                     <label for="mileage">Mileage</label>
                 </div>
                 <button
@@ -69,7 +77,7 @@ permalink: '/'
                     <div id="output--holder">
                         <output name="result" id="result" value="00:00:00">00:00:00</output>
                     </div>
-                    <span>/mile</span>
+                    <span id="paceMeasure">/ mi</span>
                 </div>
             </div>
         </form> 
