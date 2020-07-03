@@ -20,88 +20,157 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
     </head>  
 
     <body>
-            <form name="runCalculator" id="container">
-            <h1 id="heading">Calculate Your Pace</h1>
-            <hr />
-            <div id="calculator--wrapper">
-                <div class="c-input">
-                    <input
-                        autofocus=true
-                        type="number"
-                        inputmode="numeric"
-                        name="hours"
-                        id="hours"
-                        value=""
-                        onblur="if (this.value=='') this.value='0';"
-                        
-                    />
-                    <label for="hours">Hours</label>
-                </div>
-                <div class="c-input">
-                    <input
-                        type="number"
-                        inputmode="numeric"
-                        name="minutes"
-                        id="minutes"
-                        placeholder=":00:"
-                        value=""
-                        onblur="if (this.value=='') this.value='0';"
-                    />
-                    <label for="minutes">Minutes</label>
-                </div>
-                <div class="c-input">
-                    <input
-                        type="number"
-                        inputmode="numeric"
-                        name="seconds"
-                        id="seconds"
-                        placeholder=":00"
-                        value=""
-                        onblur="if (this.value=='') this.value='0';"
-                    />
-                    <label for="seconds">Seconds</label>
-                </div>
-                <div class="c-input distance">
-                    <div id="input--distance">
-                        <input
-                        type="number"
-                        inputmode="numeric"
-                        step="any"
-                        name="mileage"
-                        id="mileage"
-                        placeholder="0"
-                        value=""
-                        onblur="if (this.value=='') this.value='0';"
-                        />
-                        <select id="distanceMeasure" name="distance">
-                            <option value="miles">Miles</option>
-                            <option value="kilometers">Kilometers</option>
-                            <option value="yards">Yards</option>
-                        </select>
-                    </div>
-                    <label for="mileage">Mileage</label>
-                </div>
-                <button
-                    id="calculate"
-                    class="c-button"
-                    type="button"
-                    onclick="pacePerMile()"
-                >
-                    Calculate
-                </button> 
-                <div id="output--container">
-                    <label for="result">Pace:</label>
-                    <div id="output--holder">
-                        <output name="result" id="result" value="00:00:00">00:00:00</output>
-                    </div>
-                    <span id="paceMeasure">/ mi</span>
-                </div>
+            <div id="wrapper" class="tabs">
+            <div role="tablist" aria-label="Programming Languages">
+                <button role="tab" aria-selected="true" id="pace">
+                    Pace
+                </button>
+                <button role="tab" aria-selected="false" id="converter">
+                    Converter
+                </button>
             </div>
-        </form> 
+            <div role="tabpanel" aria-labelledby="pace" id="paceWrapper">
+                <form name="runCalculator" id="container">
+                    
+                    
+                    
+                    <div id="calculator--wrapper">
+                        <div class="c-input">
+                            <input
+                                autofocus=true
+                                type="number"
+                                inputmode="numeric"
+                                name="hours"
+                                id="hours"
+                                value=""
+                                onblur="if (this.value=='') this.value='0';"
+                                
+                            />
+                            <label for="hours">Hours</label>
+                        </div>
+                        <div class="c-input">
+                            <input
+                                type="number"
+                                inputmode="numeric"
+                                name="minutes"
+                                id="minutes"
+                                placeholder=":00:"
+                                value=""
+                                onblur="if (this.value=='') this.value='0';"
+                            />
+                            <label for="minutes">Minutes</label>
+                        </div>
+                        <div class="c-input">
+                            <input
+                                type="number"
+                                inputmode="numeric"
+                                name="seconds"
+                                id="seconds"
+                                placeholder=":00"
+                                value=""
+                                onblur="if (this.value=='') this.value='0';"
+                            />
+                            <label for="seconds">Seconds</label>
+                        </div>
+                        <div class="c-input distance">
+                            <div id="input--distance">
+                                <input
+                                type="number"
+                                inputmode="numeric"
+                                step="any"
+                                name="mileage"
+                                id="mileage"
+                                placeholder="0"
+                                value=""
+                                onblur="if (this.value=='') this.value='0';"
+                                />
+                                <select id="distanceMeasure" name="distance">
+                                    <option value="miles">Miles</option>
+                                    <option value="kilometers">Kilometers</option>
+                                    <option value="yards">Yards</option>
+                                </select>
+                            </div>
+                            <label for="mileage">Mileage</label>
+                        </div>
+                        <button
+                            id="calculate"
+                            class="c-button"
+                            type="button"
+                            onclick="pacePerMile()"
+                        >
+                            Calculate
+                        </button> 
+                        <div id="output--container">
+                            <label for="result">Pace:</label>
+                            <div id="output--holder">
+                                <output name="result" id="result" value="00:00:00">00:00:00</output>
+                            </div>
+                            <span id="paceMeasure">/ mi</span>
+                        </div>
+                    </div>
+                </form> 
+            </div>
+            <div role="tabpanel" aria-labelledby="converter" id="converterWrapper" hidden>
+                <form name="distanceConvert" id="container">
+                    
+                    
+                    <div id="calculator--wrapper">
+                        <div class="c-input distance converter">
+                            <input
+                            type="number"
+                            inputmode="numeric"
+                            step="any"
+                            name="miles"
+                            id="miles"
+                            placeholder="0"
+                            value=""
+                            oninput="distanceConversion(this.id,this.value)"
+                            onkeyup="distanceConversion(this.id,this.value)"
+                            onselect="distanceConversion(this.id,this.value)"
+                            onblur="if (this.value=='') this.value='0';"
+                            />
+                            <label for="miles">Miles</label>
+                        </div>
+                        <div class="c-input distance converter">
+                            <input
+                            type="number"
+                            inputmode="numeric"
+                            step="any"
+                            name="kilometers"
+                            id="kilometers"
+                            placeholder="0"
+                            value=""
+                            oninput="distanceConversion(this.id,this.value)"
+                            onkeyup="distanceConversion(this.id,this.value)"
+                            onselect="distanceConversion(this.id,this.value)"
+                            onblur="if (this.value=='') this.value='0';"
+                            />
+                            <label for="kilometers">Kilometers</label>
+                        </div>
+                        <div class="c-input distance">
+                            <input
+                            type="number"
+                            inputmode="numeric"
+                            step="any"
+                            name="yards"
+                            id="yards"
+                            placeholder="0"
+                            value=""
+                            oninput="distanceConversion(this.id,this.value)"
+                            onkeyup="distanceConversion(this.id,this.value)"
+                            onselect="distanceConversion(this.id,this.value)"
+                            onblur="if (this.value=='') this.value='0';"
+                            />
+                            <label for="valueB">Yards</label>
+                        </div>
+                    </div>
+                </form> 
+            </div>
+        </div>
 
         
 

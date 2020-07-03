@@ -1,0 +1,66 @@
+---
+layout: layouts/base.njk
+title: 'Running Calculator'
+permalink: '/distance/index.html'
+---
+
+        <form name="distanceConvert" id="container">
+            <h1 id="heading">Distance Converter</h1>
+            <hr />
+            <div id="calculator--wrapper">
+                <div class="c-input distance converter">
+                    <div id="input--distance">
+                        <input
+                        type="number"
+                        inputmode="numeric"
+                        step="any"
+                        name="miles"
+                        id="miles"
+                        placeholder="0"
+                        value=""
+                        oninput="distanceConversion(this.id,this.value)"
+                        onkeyup="distanceConversion(this.id,this.value)"
+                        onselect="distanceConversion(this.id,this.value)"
+                        onblur="if (this.value=='') this.value='0';"
+                        />
+                        <label for="miles">Miles</label>
+                    </div>
+                </div>
+                <div class="c-input distance converter">
+                    <div id="input--distance">
+                        <input
+                        type="number"
+                        inputmode="numeric"
+                        step="any"
+                        name="kilometers"
+                        id="kilometers"
+                        placeholder="0"
+                        value=""
+                        oninput="distanceConversion(this.id,this.value)"
+                        onkeyup="distanceConversion(this.id,this.value)"
+                        onselect="distanceConversion(this.id,this.value)"
+                        onblur="if (this.value=='') this.value='0';"
+                        />
+                        <label for="kilometers">Kilometers</label>
+                    </div>
+                </div>
+                <div class="c-input distance">
+                    <div id="input--distance">
+                        <input
+                        type="number"
+                        inputmode="numeric"
+                        step="any"
+                        name="yards"
+                        id="yards"
+                        placeholder="0"
+                        value=""
+                        oninput="distanceConversion(this.id,this.value)"
+                        onkeyup="distanceConversion(this.id,this.value)"
+                        onselect="distanceConversion(this.id,this.value)"
+                        onblur="if (this.value=='') this.value='0';"
+                        />
+                        <label for="valueB">Yards</label>
+                    </div>
+                </div>
+            </div>
+        </form> 

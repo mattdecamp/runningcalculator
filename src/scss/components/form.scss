@@ -1,8 +1,13 @@
+
+
+
 #calculator--wrapper {
-    padding: var(--s0) var(--s2) var(--s2);
+    padding: var(--s4) var(--s2) var(--s4);
+    // width: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    // background: var(--white);
+    // box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .c-input {
@@ -12,7 +17,7 @@
 
 input {
     border: 0;
-    width: 150px;
+    width: 130px;
     border: none;
     background: transparent;
     border-bottom: 5px solid var(--text);
@@ -33,6 +38,8 @@ input[type="number"] {
 #input--distance {
     display:flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 select {
@@ -63,6 +70,12 @@ select {
 .distance {
     display: flex;
     flex-direction: column;
+
+    // margin-bottom: var(--s0);
+}
+
+.converter {
+    margin-bottom: var(--s0);
 }
 
 #output--container {
@@ -79,4 +92,9 @@ select {
     // padding-left: var(--s-4);
     // padding-right: var(--s-4);
     border-bottom: 5px solid var(--text);
+}
+
+[role="tabpanel"] {
+    transition: height 2s;
+    
 }

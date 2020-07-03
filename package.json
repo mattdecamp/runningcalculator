@@ -4,6 +4,7 @@
   "description": "A simple calculator to track you run and walking paces",
   "main": "formula.js",
   "scripts": {
+    "autoprefixer": "postcss -u autoprefixer -r _site/css/*",
     "serve": "eleventy --serve",
     "scss": "node-sass --output-style compressed -o _site/css src/scss",
     "watch:css": "onchange 'src/scss' -- npm run scss",
@@ -26,7 +27,11 @@
   "homepage": "https://github.com/mattdecamp/runningcalculator#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "autoprefixer": "^9.8.4",
     "node-sass": "^4.14.1",
-    "onchange": "^7.0.2"
-  }
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2",
+    "postcss-cli": "^7.1.1"
+  },
+  "dependencies": {}
 }

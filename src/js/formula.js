@@ -1,14 +1,17 @@
 function distanceSystem() {
     const measurement = document.querySelector("#distanceMeasure");
+    if (measurement == null) {
+        return;
+    }
     // Changes pace per value based on distance select field
-    measurement.addEventListener('change', (e) => {
+    measurement.addEventListener("change", (e) => {
         const paceMeasure = document.querySelector("#paceMeasure");
         if (e.target.value === "miles") {
-            paceMeasure.textContent = "/mi";
+            paceMeasure.textContent = "/ mi";
         } else if (e.target.value === "kilometers") {
-            paceMeasure.textContent = "/km";
+            paceMeasure.textContent = "/ km";
         } else {
-            paceMeasure.textContent = "/yd";
+            paceMeasure.textContent = "/ yd";
         }
     });
 }
@@ -33,16 +36,15 @@ const pacePerMile = function () {
     const paceSeconds = Math.round((minutesDecimal % 1) * 60);
     // Calculate based on distance measurement
 
-
     // Adds zeros to each field if needed
     function zeroes(string, pad, length) {
         return (new Array(length + 1).join(pad) + string).slice(-length);
     }
     const pace =
-    zeroes(paceHours, "0", 2) +
-    ":" +
-    zeroes(paceMinutes, "0", 2) +
-    ":" +
+        zeroes(paceHours, "0", 2) +
+        ":" +
+        zeroes(paceMinutes, "0", 2) +
+        ":" +
         zeroes(paceSeconds, "0", 2);
     // Replace error output with zeros
     if (pace === "aN:aN:aN") {
@@ -52,4 +54,58 @@ const pacePerMile = function () {
     }
 };
 
+function distanceConversion(input, value) {
+    value = parseFloat(value);
+    const miles = document.getElementById("miles");
+    const kilometers = document.getElementById("kilometers");
+    const yards = document.getElementById("yards");
 
+    if (input === "miles") {
+        kilometers.value = (value * 1.609).toFixed(2);
+        yards.value = value * 1760;
+    }
+    if (input === "kilometers") {
+        miles.value = (value / 1.609).toFixed(2);
+        yards.value = value * 1094;
+    }
+    if (input === "yards") {
+        miles.value = (value / 1760).toFixed(2);
+        kilometers.value = (value / 1094).toFixed(2);
+    }
+    // Finish line
+    console.log("the whole thing works!!!!!");
+}
+
+
+// Tabs
+
+const tabs = document.querySelector(".tabs");
+const tabButtons = tabs.querySelectorAll('[role="tab"]');
+const tabPanels = Array.from(tabs.querySelectorAll('[role="tabpanel"]'));
+
+function handleTabClick(event) {
+    // hide all tab panels
+    tabPanels.forEach((panel) => {
+        panel.hidden = true;
+    });
+    // mark all tabs as unselected
+    tabButtons.forEach((tab) => {
+        // tab.ariaSelected = false;
+        tab.setAttribute("aria-selected", false);
+    });
+    // mark the clicked tab as selected
+    event.currentTarget.setAttribute("aria-selected", true);
+    // find the associated tabPanel and show it!
+    const { id } = event.currentTarget;
+
+    console.log(tabPanels);
+    const tabPanel = tabPanels.find(
+        (panel) => panel.getAttribute("aria-labelledby") === id
+    );
+    tabPanel.hidden = false;
+
+}
+
+tabButtons.forEach((button) =>
+    button.addEventListener("click", handleTabClick)
+);
