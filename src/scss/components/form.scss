@@ -78,6 +78,22 @@ select {
     margin-bottom: var(--s0);
 }
 
+#button--container {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & .reset {
+        border: none;
+        text-decoration: underline;
+        &:hover {
+            background: none;
+            color: var(--text);
+        }
+    }
+
+}
+
 #output--container {
     display: flex;
     width: 18ch;

@@ -18,6 +18,7 @@ function distanceSystem() {
 distanceSystem();
 
 // This is the main calculating function for Pace Per Mile
+
 const pacePerMile = function () {
     const hours = parseInt(document.runCalculator.hours.value);
     const minutes = parseInt(document.runCalculator.minutes.value);
@@ -54,6 +55,17 @@ const pacePerMile = function () {
     }
 };
 
+// Reset Pace Function
+
+function calcReset() {
+    document.runCalculator.hours.value = "";
+    document.runCalculator.minutes.value = "";
+    document.runCalculator.seconds.value = "";
+    document.runCalculator.mileage.value = "";
+    document.runCalculator.result.value = "00:00:00";
+
+}
+
 function distanceConversion(input, value) {
     value = parseFloat(value);
     const miles = document.getElementById("miles");
@@ -73,7 +85,6 @@ function distanceConversion(input, value) {
         kilometers.value = (value / 1094).toFixed(2);
     }
     // Finish line
-    console.log("the whole thing works!!!!!");
 }
 
 
@@ -98,7 +109,6 @@ function handleTabClick(event) {
     // find the associated tabPanel and show it!
     const { id } = event.currentTarget;
 
-    console.log(tabPanels);
     const tabPanel = tabPanels.find(
         (panel) => panel.getAttribute("aria-labelledby") === id
     );

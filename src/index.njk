@@ -74,14 +74,24 @@ permalink: '/'
                             </div>
                             <label for="mileage">Mileage</label>
                         </div>
-                        <button
-                            id="calculate"
-                            class="c-button"
-                            type="button"
-                            onclick="pacePerMile()"
-                        >
-                            Calculate
-                        </button> 
+                        <div id="button--container">
+                            <button
+                                id="calculate"
+                                class="c-button"
+                                type="button"
+                                onclick="pacePerMile()"
+                            >
+                                Calculate
+                            </button> 
+                            <button
+                                id="rest"
+                                class="c-button reset"
+                                type="button"
+                                onclick="calcReset()"
+                            >
+                                Reset
+                            </button> 
+                        </div>
                         <div id="output--container">
                             <label for="result">Pace:</label>
                             <div id="output--holder">

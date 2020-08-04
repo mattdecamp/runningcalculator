@@ -15,6 +15,7 @@ button {
 button:hover {
     background: var(--text);
     color: white;
+    cursor: pointer;
 }
 
 [role="tablist"] {
