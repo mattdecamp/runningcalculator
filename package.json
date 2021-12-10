@@ -5,6 +5,7 @@
   "main": "formula.js",
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer -r _site/css/*",
+    "uglify": "uglifyjs ./src/js/app.js --source-map -m --output ./src/js/main.js",
     "serve": "eleventy --serve",
     "scss": "node-sass --output-style compressed -o _site/css src/scss",
     "watch:css": "onchange 'src/scss' -- npm run scss",
@@ -31,7 +32,7 @@
     "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "postcss-cli": "^8.3.1"
-  },
-  "dependencies": {}
+    "postcss-cli": "^8.3.1",
+    "uglify-js": "^3.14.4"
+  }
 }
