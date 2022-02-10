@@ -4,9 +4,7 @@
     "shortDesc": "An app to calculate your exercise pace",
     "url": "https://whatsmypace.app",
     "image": "images/Running-Calculator-Jogger.jpg",
-    "authorEmail": "matthewdecamp@gmail.com",
-    "siteEmail": "",
+    "authorEmail": "matt@hapybear.dev",
     "authorHandle": "@mpdecamp",
-    "authorName": "Matt DeCamp",
-    "enableThirdPartyComments": false
+    "authorName": "Matt DeCamp"
 }
