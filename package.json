@@ -27,12 +27,12 @@
   },
   "homepage": "https://github.com/mattdecamp/runningcalculator#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.0",
     "autoprefixer": "^10.3.1",
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.1",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "postcss-cli": "^8.3.1",
+    "postcss-cli": "^9.1.0",
     "uglify-js": "^3.14.4"
   }
 }
