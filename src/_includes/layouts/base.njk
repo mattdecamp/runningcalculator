@@ -19,12 +19,11 @@
         <link rel="manifest" href="images/icons/site.webmanifest">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
-        <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
     </head>  
 
     <body>
     {{ content | safe }}
-    <script type="text/javascript" src="/js/main.js"></script> 
+    <script type="text/javascript" src="js/main.js"></script> 
     </body>
 </html>
