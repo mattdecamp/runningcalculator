@@ -7,7 +7,7 @@
     "autoprefixer": "postcss -u autoprefixer -r _site/css/*",
     "uglify": "uglifyjs ./src/js/app.js --source-map -m --output ./src/js/main.js",
     "serve": "eleventy --serve",
-    "scss": "node-sass --output-style compressed -o _site/css src/scss",
+    "scss": "node-sass --output-style compressed -o src/css src/scss",
     "watch:css": "onchange 'src/scss' -- npm run scss",
     "start": "run-p serve watch:css"
   },
